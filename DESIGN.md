@@ -27,7 +27,7 @@ An editorial journey from the spectacular Himalayan landscape to intimate travel
 
 ## Motion
 
-- Hero entrance (GSAP timeline): the landscape settles from a 1.14 zoom, the NEPAL letters rise one by one from behind the ridge, then caption, copy and preview follow.
+- Hero entrance (GSAP timeline): the landscape settles from a 1.14 zoom, the NEPAL letters rise one by one from behind the ridge, then the copy and preview follow.
 - ScrollTrigger: the landscape drifts down while the title lifts 140px, so the letters visibly slide against the mountain; the hero copy fades out as you scroll.
 - Section headings and copy reveal on scroll; destination cards stagger in; the experience photo and closing image open from an inset clip; the closing image has its own parallax.
 - Reading-progress bar along the top edge.
