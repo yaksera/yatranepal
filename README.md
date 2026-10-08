@@ -37,7 +37,7 @@ Use a web server rather than double-clicking `out/index.html`; assets use root-r
 - Destination preview controls, filters and accessible native detail dialogs.
 - Three keyboard-operable experience tabs and expandable FAQs.
 - Personal trip-outline builder with local text-file download.
-- Three locally bundled Nepal photos, self-hosted Manrope, Playfair Display and Noto Sans Devanagari variable fonts, and credits/licenses.
+- Three locally bundled Nepal photos, self-hosted Archivo, Newsreader and Noto Sans Devanagari variable fonts, and credits/licenses.
 - A prebuilt static export for immediate preview and simple hosting.
 
 ## Project structure

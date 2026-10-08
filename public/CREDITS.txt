@@ -15,10 +15,10 @@ bhaktapur.jpg — Nyatapola Temple, Bhaktapur, Nepal
 Photographer: Rajat Chakraborty
 https://unsplash.com/photos/I5218M5KH98
 
-Manrope variable and Playfair Display variable fonts:
+Archivo variable and Newsreader variable fonts:
 Distributed under the SIL Open Font License 1.1.
-Bundled license texts: /fonts/Manrope-LICENSE.txt and /fonts/Playfair-Display-LICENSE.txt.
-Fontsource: https://fontsource.org/fonts/manrope and https://fontsource.org/fonts/playfair-display
+Bundled license texts: /fonts/Archivo-LICENSE.txt and /fonts/Newsreader-LICENSE.txt.
+Fontsource: https://fontsource.org/fonts/archivo and https://fontsource.org/fonts/newsreader
 
 Interface icons: Lucide, ISC License — https://lucide.dev/license
 The brand name Yatra Nepal is a placeholder, not an assertion of affiliation with an existing travel business.

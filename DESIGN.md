@@ -16,9 +16,12 @@ An editorial journey from the spectacular Himalayan landscape to intimate travel
 
 ## Typography
 
-- Manrope variable: navigation, NEPAL title, body and UI; weights 400–800.
-- Playfair Display variable, italic: editorial emphasis inside large headings.
-- Main body copy: 16px, spacious leading.
+- Archivo variable (wght + wdth): body, UI and the NEPAL title, set at a narrowed 72% width so it reads like a poster, not a stock geometric sans.
+- Newsreader variable (wght + opsz): headings, brand wordmark, card titles and FAQ questions. Headings stay upright; there are no mid-sentence italic serif swaps.
+- Newsreader italic only for short captions (hero route line, photo footnote, signature).
+- Section labels are sentence case and numbered (01–04) instead of tiny letter-spaced capitals.
+- Noto Sans Devanagari for the यात्रा brand mark and the नमस्ते strip.
+- Main body copy: 16px, spacious leading. Corners are 4–6px across buttons, cards and dialogs.
 - Fluid heading sizes, responsive layouts at 1100px, 767px and 380px.
 - Font files and SIL licenses included under public/fonts/.
 
