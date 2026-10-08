@@ -16,7 +16,7 @@ An editorial journey from the spectacular Himalayan landscape to intimate travel
 
 ## Typography
 
-- Archivo variable (wght + wdth): body, UI and the NEPAL title, set at a narrowed 72% width so it reads like a poster, not a stock geometric sans.
+- Archivo variable (wght + wdth): body, UI and the NEPAL title. The title is set wide and short so the letters sit in the sky above the ridge, with only the summit cutting through them.
 - Newsreader variable (wght + opsz): headings, brand wordmark, card titles and FAQ questions. Headings stay upright; there are no mid-sentence italic serif swaps.
 - Newsreader italic only for short captions (hero route line, photo footnote, signature).
 - Section labels are sentence case and numbered (01–04) instead of tiny letter-spaced capitals.

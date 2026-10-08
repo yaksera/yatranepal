@@ -46,7 +46,7 @@ h1,h2,h3 { font-family:var(--serif); font-optical-sizing:auto; font-weight:400; 
 .button-dark { background:var(--ink); color:white; }
 .button-dark:hover { background:#2a443b; }
 .hero-caption { position:absolute; top:142px; left:0; right:0; z-index:2; text-align:center; font-family:var(--serif); font-style:italic; font-size:19px; font-weight:400; }
-.hero-title { position:absolute; top:173px; left:0; width:100%; margin:0; z-index:2; display:flex; justify-content:center; font-family:var(--sans); font-size:clamp(170px,29vw,450px); font-weight:640; font-stretch:72%; letter-spacing:-.01em; line-height:.8; color:#fff9ed; }
+.hero-title { position:absolute; top:173px; left:0; width:100%; margin:0; z-index:2; display:flex; justify-content:center; font-family:var(--sans); font-size:clamp(150px,23vw,380px); font-weight:700; font-stretch:100%; letter-spacing:-.02em; line-height:.8; color:#fff9ed; }
 .hero-title span { display:inline-block; }
 .hero-foreground { z-index:3; }
 .hero-shade { position:absolute; z-index:4; inset:0; background:linear-gradient(180deg,transparent 32%,rgba(13,27,31,.1) 48%,rgba(9,24,27,.70) 79%,rgba(9,22,25,.89)); pointer-events:none; }
@@ -184,7 +184,7 @@ h1,h2,h3 { font-family:var(--serif); font-optical-sizing:auto; font-weight:400; 
 @keyframes fade-in { from { opacity:.6; } to { opacity:1; } }
 @media (min-width:1600px) { .hero-title { top:180px; } .hero-bottom { left:70px; right:70px; } }
 @media (max-width:1100px) {
-  .hero { min-height:750px; }.hero-nav { margin-inline:30px; }.hero-title { top:190px; }.hero-caption { top:150px; }
+  .hero { min-height:750px; }.hero-nav { margin-inline:30px; }.hero-title { top:130px; }.hero-caption { top:96px; }
   .hero-bottom { left:35px; right:35px; }.scroll-cue { left:35px; }
   .desktop-nav { gap:21px; padding:13px 20px; }.hero-right { width:200px; }.destination-preview { height:138px; }
   .section-shell { padding-inline:5%; }.card-image { height:340px; }.card-caption h3 { font-size:25px; }.card-arrow { right:16px; bottom:23px; width:32px; height:32px; }
@@ -195,7 +195,7 @@ h1,h2,h3 { font-family:var(--serif); font-optical-sizing:auto; font-weight:400; 
   html { scroll-padding-top:18px; }.hero { margin:9px; border-radius:17px; height:calc(100svh - 18px); min-height:760px; max-height:1000px; }
   .hero-nav { margin-inline:22px; padding-top:21px; }.brand { font-size:26px; }.brand small { font-size:12px; }
   .desktop-nav { display:none; }.mobile-toggle { display:flex; }.nav-cta { min-height:41px; padding:10px 15px; font-size:11px; gap:10px; }.nav-cta svg { width:14px; }
-  .hero-caption { top:112px; font-size:14px; }.hero-title { top:150px; font-size:31vw; line-height:.9; }
+  .hero-caption { top:112px; font-size:14px; }.hero-title { top:150px; font-size:24vw; line-height:.9; }
   .hero-photo { object-position:center; }
   .hero-bottom { left:26px; right:26px; bottom:72px; gap:24px; }.hero-copy h2 { font-size:35px; letter-spacing:-1px; }.hero-copy p { font-size:12px; margin:20px 0 25px; }.hero-right { display:none; }
   .hero-copy .eyebrow { font-size:12px; }.hero-shade { background:linear-gradient(180deg,transparent 25%,#0b1b220f 40%,#0b1e23b3 72%,#0b1e23ed); }
@@ -222,4 +222,4 @@ h1,h2,h3 { font-family:var(--serif); font-optical-sizing:auto; font-weight:400; 
 @media(max-width:767px) { .nav-cta { font-size:12px; }.hero-copy p { font-size:14px; }.filter-row button { font-size:12px; }.footer-top nav { font-size:11px; }.hero-copy h2 { font-size:34px; } }
 @font-face { font-family:'Noto Sans Devanagari'; font-style:normal; font-display:swap; font-weight:100 900; src:url('/fonts/noto-sans-devanagari-devanagari-wght-normal.woff2') format('woff2'); }
 .strip-nepali { font-family:'Noto Sans Devanagari',sans-serif; }
-@media(min-width:1101px) { .hero-title { top:150px; }.hero-caption { top:108px; } }
+@media(min-width:1101px) { .hero-title { top:128px; }.hero-caption { top:82px; } }
