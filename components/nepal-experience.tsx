@@ -39,13 +39,24 @@ export default function NepalExperience() {
     const mm = gsap.matchMedia();
     mm.add('(prefers-reduced-motion: no-preference)', () => {
       const ctx = gsap.context(() => {
+        // Both landscape layers share one box, so scaling them together keeps the mask aligned.
         gsap.timeline({ defaults: { ease: 'power3.out' } })
-          .from('.hero-nav', { y: -16, opacity: 0, duration: 0.8 })
-          .from('.hero-title span', { yPercent: 40, opacity: 0, duration: 1.3, stagger: 0.08 }, '-=0.6')
-          .from('.hero-caption, .hero-bottom', { y: 25, opacity: 0, duration: 1, stagger: 0.12 }, '-=0.8');
-        gsap.to('.hero-landscape', { y: 65, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 } });
-        gsap.to('.hero-title', { y: -40, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 } });
-        gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach(el => gsap.from(el, { y: 32, opacity: 0, duration: 0.85, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 92%', once: true } }));
+          .from('.hero-landscape', { scale: 1.14, duration: 2.4, ease: 'power2.out' })
+          .from('.hero-nav', { y: -20, opacity: 0, duration: 0.8 }, 0.2)
+          // Letters rise from behind the ridge: the masked foreground sits above the title.
+          .from('.hero-title span', { yPercent: 75, opacity: 0, duration: 1.6, stagger: 0.1, ease: 'expo.out' }, 0.35)
+          .from('.hero-caption', { y: 16, opacity: 0, duration: 0.9 }, 0.9)
+          .from('.hero-copy > *', { y: 30, opacity: 0, duration: 1, stagger: 0.1 }, 1.0)
+          .from('.hero-right, .scroll-cue', { y: 30, opacity: 0, duration: 1, stagger: 0.1 }, 1.25);
+        const heroScroll = { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 };
+        gsap.to('.hero-landscape', { y: 90, ease: 'none', scrollTrigger: heroScroll });
+        gsap.to('.hero-title', { y: -140, ease: 'none', scrollTrigger: heroScroll });
+        gsap.to('.hero-bottom', { y: -60, opacity: 0, ease: 'none', scrollTrigger: { ...heroScroll, end: '60% top' } });
+        gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach(el => gsap.from(el, { y: 48, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%', once: true } }));
+        gsap.set('.destination-card', { y: 60, opacity: 0 });
+        ScrollTrigger.batch('.destination-card', { start: 'top 90%', once: true, onEnter: cards => gsap.to(cards, { y: 0, opacity: 1, duration: 1, stagger: 0.12, ease: 'power3.out' }) });
+        gsap.utils.toArray<HTMLElement>('.experience-photo, .cta-section').forEach(el => gsap.from(el, { clipPath: 'inset(10% 8% 10% 8% round 6px)', duration: 1.4, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 85%', once: true } }));
+        gsap.fromTo('.cta-section > img', { yPercent: -8, scale: 1.12 }, { yPercent: 8, scale: 1.12, ease: 'none', scrollTrigger: { trigger: '.cta-section', start: 'top bottom', end: 'bottom top', scrub: true } });
         gsap.to('.reading-progress', { scaleX: 1, ease: 'none', scrollTrigger: { start: 0, end: 'max', scrub: true } });
       }, root);
       return () => ctx.revert();
@@ -113,7 +124,7 @@ export default function NepalExperience() {
         {menu && <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation">{nav.map(link => <a key={link.href} href={link.href} onClick={() => setMenu(false)}>{link.text}</a>)}<button onClick={openPlan}>Plan your trip</button></nav>}
         <p className="hero-caption">Kathmandu · Khumbu · Pokhara · Bhaktapur</p>
         <h1 className="hero-title" aria-label="Nepal">{'NEPAL'.split('').map((letter, index) => <span aria-hidden="true" key={index}>{letter}</span>)}</h1>
-        <svg className="hero-foreground hero-landscape" viewBox="0 0 1773 1407" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <svg className="hero-foreground hero-landscape" viewBox="0 0 1773 1407" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
           <defs><clipPath id="mountain-edge"><path d="M0 643 28 654 51 655 89 665 118 655 161 637 184 649 206 635 230 623 249 605 268 629 278 613 303 595 328 589 350 567 369 535 395 507 421 488 432 461 460 452 484 438 509 416 523 400 548 390 577 351 597 338 608 335 628 362 649 391 673 422 696 449 717 483 739 490 762 493 780 510 803 519 817 529 833 519 848 528 865 555 883 596 907 600 921 628 945 642 975 650 1000 670 1035 682 1076 686 1101 694 1140 692 1170 682 1195 696 1223 690 1255 677 1282 652 1311 614 1333 608 1352 602 1373 628 1405 670 1439 699 1465 684 1492 653 1518 628 1532 634 1554 657 1585 673 1626 686 1647 680 1667 671 1695 695 1712 704 1729 696 1755 714 1773 708V1407H0Z"/></clipPath></defs>
           <image href="/images/himalaya.jpg" width="1773" height="1407" clipPath="url(#mountain-edge)" />
         </svg>

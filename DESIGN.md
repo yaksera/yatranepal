@@ -27,12 +27,13 @@ An editorial journey from the spectacular Himalayan landscape to intimate travel
 
 ## Motion
 
-- GSAP entrance timeline: navigation enters, NEPAL letters stagger, supporting content follows.
-- ScrollTrigger: foreground and background move together; title moves independently to create depth.
-- Scroll-triggered editorial reveals and reading-progress indicator.
-- CSS image zoom, button hover and short tab/filter transitions.
-- `prefers-reduced-motion` disables animation and smooth scrolling. Content remains visible without GSAP animation.
+- Hero entrance (GSAP timeline): the landscape settles from a 1.14 zoom, the NEPAL letters rise one by one from behind the ridge, then caption, copy and preview follow.
+- ScrollTrigger: the landscape drifts down while the title lifts 140px, so the letters visibly slide against the mountain; the hero copy fades out as you scroll.
+- Section headings and copy reveal on scroll; destination cards stagger in; the experience photo and closing image open from an inset clip; the closing image has its own parallax.
+- Reading-progress bar along the top edge.
+- `prefers-reduced-motion` disables all of the above (including when Windows "Animation effects" is off). Content stays visible without GSAP.
 - GSAP matchMedia/context revert on unmount to prevent duplicate animations.
+- The hero photo and its mask are top-anchored (`object-position: center top`, `xMidYMin slice`) so the sky stays above the title on wide, short screens.
 
 ## Asset map
 
