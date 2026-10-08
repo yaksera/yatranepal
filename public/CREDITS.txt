@@ -1,0 +1,27 @@
+YATRA NEPAL — ASSET CREDITS
+
+Photography licensed under the Unsplash License: https://unsplash.com/license
+The photographs are bundled with this website design. Do not sell the unmodified photographs as standalone assets.
+
+himalaya.jpg — Ama Dablam, Nepal
+Photographer: Eugene Ga
+https://unsplash.com/photos/infssQ2tjeM
+
+pokhara.jpg — Phewa Lake, Pokhara, Nepal
+Photographer: Martijn Vonk
+https://unsplash.com/photos/uz3u87NwS3s
+
+bhaktapur.jpg — Nyatapola Temple, Bhaktapur, Nepal
+Photographer: Rajat Chakraborty
+https://unsplash.com/photos/I5218M5KH98
+
+Manrope variable and Playfair Display variable fonts:
+Distributed under the SIL Open Font License 1.1.
+Bundled license texts: /fonts/Manrope-LICENSE.txt and /fonts/Playfair-Display-LICENSE.txt.
+Fontsource: https://fontsource.org/fonts/manrope and https://fontsource.org/fonts/playfair-display
+
+Interface icons: Lucide, ISC License — https://lucide.dev/license
+The brand name Yatra Nepal is a placeholder, not an assertion of affiliation with an existing travel business.
+
+Noto Sans Devanagari variable: SIL Open Font License 1.1.
+Bundled license: /fonts/Noto-Sans-Devanagari-LICENSE.txt.
