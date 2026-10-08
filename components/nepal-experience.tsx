@@ -46,7 +46,7 @@ export default function NepalExperience() {
           // Letters rise from behind the ridge: the masked foreground sits above the title.
           .from('.hero-title span', { yPercent: 75, opacity: 0, duration: 1.6, stagger: 0.1, ease: 'expo.out' }, 0.35)
           .from('.hero-copy > *', { y: 30, opacity: 0, duration: 1, stagger: 0.1 }, 1.0)
-          .from('.hero-right, .scroll-cue', { y: 30, opacity: 0, duration: 1, stagger: 0.1 }, 1.25);
+          .from('.hero-right, .scroll-cue, .hero-place', { y: 30, opacity: 0, duration: 1, stagger: 0.1 }, 1.25);
         const heroScroll = { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 };
         gsap.to('.hero-landscape', { y: 90, ease: 'none', scrollTrigger: heroScroll });
         gsap.to('.hero-title', { y: -140, ease: 'none', scrollTrigger: heroScroll });
@@ -128,10 +128,11 @@ export default function NepalExperience() {
         </svg>
         <div className="hero-shade" />
         <div className="hero-bottom">
-          <div className="hero-copy"><div className="eyebrow light">Ama Dablam, 6,812 m</div><h2>Some places you visit.<br/>Others stay with you.</h2><p>From Himalayan trails to timeless courtyards.<br className="desktop-break"/> Find the Nepal that feels like you.</p><a href="#destinations" className="button button-white">Explore Nepal <ArrowUpRight size={18}/></a></div>
+          <div className="hero-copy"><h2>Some places you visit.<br/>Others stay with you.</h2><p>From Himalayan trails to timeless courtyards.<br className="desktop-break"/> Find the Nepal that feels like you.</p><a href="#destinations" className="button button-white">Explore Nepal <ArrowUpRight size={18}/></a></div>
           <div className="hero-right"><div className="preview-top"><span>Next on your horizon</span><span>{spotlight + 1} of {destinations.length}</span></div><button className="destination-preview" onClick={() => openDestination(featured)} aria-label={`Explore ${featured.name}`}><img src={featured.image} alt={featured.alt}/><span className="preview-label"><span>{featured.name}</span><ArrowUpRight size={20}/></span></button><div className="preview-controls"><span className="flex gap-2">{destinations.map((d, index) => <button key={d.id} className={`slide-dot ${index === spotlight ? 'active' : ''}`} aria-label={`Preview ${d.name}`} aria-pressed={index === spotlight} onClick={() => setSpotlight(index)}/>)}</span><div className="flex gap-2"><button aria-label="Previous destination" onClick={() => changeSpotlight(-1)}><ArrowLeft size={17}/></button><button aria-label="Next destination" onClick={() => changeSpotlight(1)}><ArrowRight size={17}/></button></div></div></div>
         </div>
         <a className="scroll-cue" href="#destinations"><ArrowDown size={15}/> Scroll</a>
+        <p className="hero-place">Ama Dablam, 6,812 m</p>
       </section>
 
       <div className="intro-strip"><span>Small country, a lot of ground to cover.</span><div><span><Mountain size={17}/> Himalayan trails</span><span><Compass size={17}/> Living culture</span><span><MapPin size={17}/> Local discoveries</span></div><span className="strip-nepali" lang="ne">नमस्ते</span></div>

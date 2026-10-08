@@ -221,4 +221,8 @@ h1,h2,h3 { font-family:var(--serif); font-optical-sizing:auto; font-weight:400; 
 @media(max-width:767px) { .nav-cta { font-size:12px; }.hero-copy p { font-size:14px; }.filter-row button { font-size:12px; }.footer-top nav { font-size:11px; }.hero-copy h2 { font-size:34px; } }
 @font-face { font-family:'Noto Sans Devanagari'; font-style:normal; font-display:swap; font-weight:100 900; src:url('/fonts/noto-sans-devanagari-devanagari-wght-normal.woff2') format('woff2'); }
 .strip-nepali { font-family:'Noto Sans Devanagari',sans-serif; }
-@media(min-width:1101px) { .hero-title { top:112px; } }
+.hero-place { position:absolute; z-index:6; bottom:22px; right:54px; margin:0; font-size:12px; color:#ffffffa6; }
+/* Desktop: the photo scales with width, so a vw offset keeps the ridge just over the base of N, E and P. */
+@media(min-width:1101px) { .hero-title { top:min(10vw, 20svh); font-size:23vw; }.hero-bottom { bottom:56px; } }
+@media(max-width:1100px) { .hero-place { right:35px; } }
+@media(max-width:767px) { .hero-place { right:26px; bottom:24px; } }

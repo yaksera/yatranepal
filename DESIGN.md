@@ -33,7 +33,7 @@ An editorial journey from the spectacular Himalayan landscape to intimate travel
 - Reading-progress bar along the top edge.
 - `prefers-reduced-motion` disables all of the above (including when Windows "Animation effects" is off). Content stays visible without GSAP.
 - GSAP matchMedia/context revert on unmount to prevent duplicate animations.
-- The hero photo and its mask are top-anchored (`object-position: center top`, `xMidYMin slice`) so the sky stays above the title on wide, short screens.
+- The hero photo and its mask are top-anchored (`object-position: center top`, `xMidYMin slice`) so the sky stays above the title on wide, short screens. On desktop the title offset is in vw, so the ridge always just covers the base of N, E and P while A and L stay clear.
 
 ## Asset map
 
